@@ -1,0 +1,25 @@
+<%= render "layouts/navbar" %>
+
+
+<div class="new-cocktail-wrapper">
+<h1>Enter your cocktail recipe</h1>
+  <div class="form-container">
+  <%= simple_form_for @cocktail do |f| %>
+    <%= f.input :name %>
+    <div class="doses-form">
+      <%= f.fields_for :doses do |d| %>
+        <%= d.input :description %>
+        <%= d.input :ingredient_id, :multiple => true, :collection => Ingredient.all, name: "doses[ingredient]" %>
+      <% end %>
+    </div>
+    <div class="doses-form">
+      <%= f.fields_for :doses do |d| %>
+        <%= d.input :description %>
+        <%= d.input :ingredient_id, :multiple => true, :collection => Ingredient.all, name: "doses[ingredient]" %>
+      <% end %>
+    </div>
+    </div>
+    <%= f.submit %>
+  <% end %>
+  </div>
+</div>
