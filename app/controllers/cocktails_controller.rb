@@ -1,6 +1,5 @@
 class CocktailsController < ApplicationController
 
-
   def index
     @cocktails = Cocktail.all
   end
@@ -21,6 +20,7 @@ class CocktailsController < ApplicationController
       params[:cocktail][:doses_attributes] do |d|
         @dose = Dose.create!(:cocktail_id => @cocktail.id, :ingredient_id => d.ingredient.id, :description => d.description)
       end
+      redirect_to cocktails_path
     else
       format.html { render action: 'new' }
     end
@@ -33,7 +33,7 @@ class CocktailsController < ApplicationController
   def destroy
     @cocktail = Cocktail.find(cocktail_params)
     @cocktail.delete
-    redirect_to cocktail_index_path
+    redirect_to cocktails_path
   end
 
   private

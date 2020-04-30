@@ -8,10 +8,23 @@
   padding: 30px;
 }
 
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  padding: 20px;
+  margin: auto;
+  padding: auto;
+}
+
 .card-trip {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  max-width: 300px;
+  padding: 15px;
+  margin: 15px;
 }
 
 .card-trip > img {
@@ -34,16 +47,18 @@
 
 
 .card-trip .card-trip-infos {
-  padding: 16px;
+  padding-top: 10px;
+  margin: 5px 5px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   position: relative;
 }
 
-.card-trip-infos .card-trip-user {
-  position: absolute;
-  right: 16px;
-  top: -20px;
-  width: 40px;
+.card-trip .recipe {
+  padding-top: 10px;
+  margin: 5px 5px;
 }
+
+
+
