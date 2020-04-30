@@ -4,8 +4,16 @@
 @import "navbar";
 
 
-.intro-image {
-  padding: 30px;
+.title-bar {
+  padding-top: 20px;
+  padding-left: 40px;
+  margin: auto;
+}
+
+.title-bar h2 {
+  color: #4c2d0e;
+  font-size: 28px;
+  font-weight: 600;
 }
 
 .box {
@@ -21,10 +29,15 @@
 .card-trip {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
   max-width: 300px;
   padding: 15px;
   margin: 15px;
+}
+
+.card-trip:hover {
+  background: #C9D92D;
+  box-shadow: 0 0 0px rgba(0,0,0,0.1);
 }
 
 .card-trip > img {
@@ -60,5 +73,16 @@
   margin: 5px 5px;
 }
 
+.button {
+  font-size: 14px;
+  background: #C9D92D;
+  padding: 15px 15px;
+  border-radius: 15px;
+  margin-top: 20px;
+  width: 100%;
+}
 
-
+.button:hover {
+  background-color: #C73D75;
+  color: #fff;
+}
